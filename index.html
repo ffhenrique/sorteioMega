@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Sena</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body id="idBody">
+
+    <div class="container">
+        <h1>Jogos Mega Sena</h1>
+
+        <div class="form">
+            <form class="formulario">
+                    <h2>Quantidade de Jogos</h2>
+                <input type="number" min="1" name="" id="qntdJogos">
+                <button type="button" class="btn" onclick="btnJogos()">SORTEAR</button>
+                <button type="button" class="btn" onclick="window.location.reload()">RESETAR</button>
+                <div class="resultado hide" id="resultadoMegaSena">
+                    <h2>JOGOS SORTEADOS</h2>
+                    
+                </div>
+            </form>
+        </div>
+        
+    </div>    
+</body>
+
+<script src="./assets/js/script.js"> </script>
+</html>

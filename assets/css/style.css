@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;    
+}
+
+body {
+    background-color: #18181B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.ajustarBody {
+    height: 100%;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 45px;
+    color: #fff;
+}
+
+.form {
+    width: 80%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario h2 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+input[type=number] {
+    width: 30%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.formulario .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 25px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(90, 90, 238);
+    transition: all 500ms ease-in-out;
+    color: #fff;
+
+}
+
+.btn:hover {
+    background-color: rgb(62, 62, 182);
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.resultado p {
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid rgb(90, 90, 238);
+    transition: all 500ms ease-in-out;
+
+}
+
+.resultado p:hover{
+    scale: 1.2;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 545px){
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .formulario h2 {
+        font-size: 20px;
+
+    
+    }
+
+    .formulario .btn {
+       font-size: 10px;
+    
+    }
+}
+
+@media screen and (max-width: 370px){
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .formulario h2 {
+        font-size: 12px;
+
+    
+    }
+
+    .formulario .btn {
+       font-size: 5px;
+    
+    }
+}
+
+
+
+
