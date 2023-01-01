@@ -57,7 +57,7 @@ body {
 }
 
 input[type=number] {
-    width: 45%;
+    width: 50%;
     height: 30px;
     font-size: 20px;
     text-align: center;
@@ -71,7 +71,7 @@ input[type=number] {
     justify-content: center;
     width: 35%;
     height: 25px;
-    padding: 12px;
+    padding: 15px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
@@ -136,17 +136,17 @@ input[type=number] {
 @media screen and (max-width: 370px){
 
     .container h1 {
-        font-size: 23px;
+        font-size: 26px;
     }
 
     .formulario h2 {
-        font-size: 15px;
+        font-size: 18px;
 
     
     }
 
     .formulario .btn {
-       font-size: 9px;
+       font-size: 12px;
     
     }
 }
