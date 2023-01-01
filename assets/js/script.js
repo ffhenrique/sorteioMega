@@ -2,66 +2,36 @@ let inserirResultado = document.getElementById('resultadoMegaSena');
 let inputJogos = document.getElementById('qntdJogos');
 let selecionarBody = document.getElementById('idBody');
 
-
-function megaSena() {
-    let lista = [];
-    let jogos = [];
-
-    let cont = 0;
-    let teste = true;
-
-    while (teste) {
-
-    let numeroAleatorio = Math.floor(Math.random() * (60 - 1) + 1);
-
-        let n = numeroAleatorio;
-        if (! lista.includes(n)){
-
-            lista.push(n);
-            cont += 1;
-        if (cont >= 7){
-            teste = false;
-            break;
-        }
-        }
-
-    lista.sort((a,b) => {
-        if (a > b) return 1;
-        if (a < b) return -1;
-
-        return 0;
-    })
-
-    jogos.push(lista.slice());
-    lista.splice(0, lista.length);
-}
-return jogos
+function getRandomInt (min, max, numbersToExclude) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    const random = Math.floor(Math.random() * (max - min) + min);
+    return numbersToExclude.includes(random) ? getRandomInt(min, max, numbersToExclude) : random;
 }
 
-
-
+function megaSena (qt, numbers=[]) {
+    numbers.push(getRandomInt(1, 60, numbers));
+    return qt - 1 > 0 ? megaSena(qt - 1, numbers) : numbers
+}
 
 function sortear () {
     let totJogos = inputJogos.value;
     let listaJogos = []
-    let jogosSorteados = [];
     
     
     
     let contador = 1;
     
     while (contador <= totJogos) {
-        listaJogos = megaSena();
-        jogosSorteados.push(listaJogos);
+        listaJogos = megaSena(6);
         inserirResultado.classList.remove('hide');
         let paragrafo = document.createElement('p');
-        let texto = document.createTextNode(`${jogosSorteados}`);
+        let texto = document.createTextNode(`${listaJogos}`);
         paragrafo.appendChild(texto);
         inserirResultado.appendChild(paragrafo);
         let quebraLinha = document.createElement('br');
         inserirResultado.appendChild(quebraLinha);
         listaJogos = []
-        jogosSorteados = []
         contador += 1;
         
     }
@@ -76,6 +46,5 @@ function btnJogos (){
 function alterarTamanhoBody () {
     selecionarBody.classList.add("ajustarBody");
 }
-
 
 
