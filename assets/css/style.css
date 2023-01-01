@@ -57,6 +57,7 @@ body {
 }
 
 input[type=number] {
+    background-color: #fff;
     width: 50%;
     height: 30px;
     font-size: 20px;
